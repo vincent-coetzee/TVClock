@@ -7,11 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0A5BB61F1778CC003613FA /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5BB51F1778CC003613FA /* PolarPoint.swift */; };
+		4D3D29741F28DBD2005A3263 /* WorldClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3D29731F28DBD2005A3263 /* WorldClockCell.swift */; };
+		4D43F9A01F28D09000032119 /* WorldClockCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43F99F1F28D09000032119 /* WorldClockCollection.swift */; };
+		4D5807CD1F179B840078D71D /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5807CC1F179B840078D71D /* CGPoint+Extensions.swift */; };
+		4D5C295F1F0FCD3C0014B14E /* Dependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C295A1F0FCD3C0014B14E /* Dependent.swift */; };
+		4D5C29601F0FCD3C0014B14E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C295B1F0FCD3C0014B14E /* Model.swift */; };
+		4D5C29611F0FCD3C0014B14E /* ValueHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C295C1F0FCD3C0014B14E /* ValueHolder.swift */; };
+		4D5C29621F0FCD3C0014B14E /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C295D1F0FCD3C0014B14E /* AbstractModel.swift */; };
+		4D5C29631F0FCD3C0014B14E /* DependentSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C295E1F0FCD3C0014B14E /* DependentSet.swift */; };
+		4D828E3A1F28836A0002F5CC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D828E391F28836A0002F5CC /* UIColor+Extensions.swift */; };
+		4D828E3C1F288D7C0002F5CC /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D828E3B1F288D7C0002F5CC /* CGRect+Extensions.swift */; };
+		4D851AA11F274CDC00FDE487 /* StylePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D851AA01F274CDC00FDE487 /* StylePalette.swift */; };
+		4D851AA31F27618F00FDE487 /* ClockHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D851AA21F27618F00FDE487 /* ClockHand.swift */; };
 		4DEAC5AB1F0FB5050064CD67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5AA1F0FB5050064CD67 /* AppDelegate.swift */; };
-		4DEAC5AD1F0FB5050064CD67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5AC1F0FB5050064CD67 /* ViewController.swift */; };
+		4DEAC5AD1F0FB5050064CD67 /* ClockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5AC1F0FB5050064CD67 /* ClockController.swift */; };
 		4DEAC5B01F0FB5050064CD67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAC5AE1F0FB5050064CD67 /* Main.storyboard */; };
 		4DEAC5B21F0FB5050064CD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAC5B11F0FB5050064CD67 /* Assets.xcassets */; };
 		4DEAC5BD1F0FB5050064CD67 /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5BC1F0FB5050064CD67 /* ClockTests.swift */; };
+		4DEAC5C81F0FB55A0064CD67 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5C71F0FB55A0064CD67 /* ClockView.swift */; };
+		4DEAC5CA1F0FC47C0064CD67 /* ClockHandLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5C91F0FC47C0064CD67 /* ClockHandLayer.swift */; };
+		4DEAC5CC1F0FCBF80064CD67 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5CB1F0FCBF80064CD67 /* Clock.swift */; };
+		BF6906CC1F2DB21300183B33 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6906CB1F2DB21300183B33 /* GridView.swift */; };
+		BF6906CE1F2E267C00183B33 /* DigitFlippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6906CD1F2E267C00183B33 /* DigitFlippingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +43,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0A5BB51F1778CC003613FA /* PolarPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarPoint.swift; sourceTree = "<group>"; };
+		4D3D29731F28DBD2005A3263 /* WorldClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockCell.swift; sourceTree = "<group>"; };
+		4D43F99F1F28D09000032119 /* WorldClockCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockCollection.swift; sourceTree = "<group>"; };
+		4D5807CC1F179B840078D71D /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		4D5C295A1F0FCD3C0014B14E /* Dependent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependent.swift; sourceTree = "<group>"; };
+		4D5C295B1F0FCD3C0014B14E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D5C295C1F0FCD3C0014B14E /* ValueHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueHolder.swift; sourceTree = "<group>"; };
+		4D5C295D1F0FCD3C0014B14E /* AbstractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
+		4D5C295E1F0FCD3C0014B14E /* DependentSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentSet.swift; sourceTree = "<group>"; };
+		4D828E391F28836A0002F5CC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4D828E3B1F288D7C0002F5CC /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		4D851AA01F274CDC00FDE487 /* StylePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePalette.swift; sourceTree = "<group>"; };
+		4D851AA21F27618F00FDE487 /* ClockHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHand.swift; sourceTree = "<group>"; };
 		4DEAC5A71F0FB5050064CD67 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEAC5AA1F0FB5050064CD67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DEAC5AC1F0FB5050064CD67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DEAC5AC1F0FB5050064CD67 /* ClockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockController.swift; sourceTree = "<group>"; };
 		4DEAC5AF1F0FB5050064CD67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DEAC5B11F0FB5050064CD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DEAC5B31F0FB5050064CD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DEAC5B81F0FB5050064CD67 /* ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEAC5BC1F0FB5050064CD67 /* ClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		4DEAC5BE1F0FB5050064CD67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DEAC5C71F0FB55A0064CD67 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		4DEAC5C91F0FC47C0064CD67 /* ClockHandLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHandLayer.swift; sourceTree = "<group>"; };
+		4DEAC5CB1F0FCBF80064CD67 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		BF6906CB1F2DB21300183B33 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		BF6906CD1F2E267C00183B33 /* DigitFlippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitFlippingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +90,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D828E3D1F28BC3C0002F5CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5807CC1F179B840078D71D /* CGPoint+Extensions.swift */,
+				4D828E391F28836A0002F5CC /* UIColor+Extensions.swift */,
+				4D828E3B1F288D7C0002F5CC /* CGRect+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D828E3E1F28BC500002F5CC /* Clock View */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAC5C71F0FB55A0064CD67 /* ClockView.swift */,
+				4DEAC5C91F0FC47C0064CD67 /* ClockHandLayer.swift */,
+				4D851AA21F27618F00FDE487 /* ClockHand.swift */,
+				4D3D29731F28DBD2005A3263 /* WorldClockCell.swift */,
+			);
+			path = "Clock View";
+			sourceTree = "<group>";
+		};
+		4D828E3F1F28BC630002F5CC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAC5AE1F0FB5050064CD67 /* Main.storyboard */,
+				4DEAC5B11F0FB5050064CD67 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4D828E401F28BC720002F5CC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAC5AA1F0FB5050064CD67 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4D828E411F28BC9E0002F5CC /* Clock Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAC5CB1F0FCBF80064CD67 /* Clock.swift */,
+			);
+			path = "Clock Logic";
+			sourceTree = "<group>";
+		};
+		4D828E421F28BCAA0002F5CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAC5AC1F0FB5050064CD67 /* ClockController.swift */,
+				4D43F99F1F28D09000032119 /* WorldClockCollection.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		4DEAC59E1F0FB5050064CD67 = {
 			isa = PBXGroup;
 			children = (
@@ -75,11 +166,17 @@
 		4DEAC5A91F0FB5050064CD67 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				4DEAC5AA1F0FB5050064CD67 /* AppDelegate.swift */,
-				4DEAC5AC1F0FB5050064CD67 /* ViewController.swift */,
-				4DEAC5AE1F0FB5050064CD67 /* Main.storyboard */,
-				4DEAC5B11F0FB5050064CD67 /* Assets.xcassets */,
+				BF6906CA1F2DB1FB00183B33 /* Custom Views */,
 				4DEAC5B31F0FB5050064CD67 /* Info.plist */,
+				4D828E401F28BC720002F5CC /* Application */,
+				4D828E3F1F28BC630002F5CC /* Assets */,
+				4D828E411F28BC9E0002F5CC /* Clock Logic */,
+				4D828E3E1F28BC500002F5CC /* Clock View */,
+				4D828E421F28BCAA0002F5CC /* Controllers */,
+				4D828E3D1F28BC3C0002F5CC /* Extensions */,
+				4D0A5BB51F1778CC003613FA /* PolarPoint.swift */,
+				4D851AA01F274CDC00FDE487 /* StylePalette.swift */,
+				4DEAC5CD1F0FCCC80064CD67 /* Value Models */,
 			);
 			path = Clock;
 			sourceTree = "<group>";
@@ -91,6 +188,27 @@
 				4DEAC5BE1F0FB5050064CD67 /* Info.plist */,
 			);
 			path = ClockTests;
+			sourceTree = "<group>";
+		};
+		4DEAC5CD1F0FCCC80064CD67 /* Value Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C295D1F0FCD3C0014B14E /* AbstractModel.swift */,
+				4D5C295A1F0FCD3C0014B14E /* Dependent.swift */,
+				4D5C295E1F0FCD3C0014B14E /* DependentSet.swift */,
+				4D5C295B1F0FCD3C0014B14E /* Model.swift */,
+				4D5C295C1F0FCD3C0014B14E /* ValueHolder.swift */,
+			);
+			path = "Value Models";
+			sourceTree = "<group>";
+		};
+		BF6906CA1F2DB1FB00183B33 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF6906CB1F2DB21300183B33 /* GridView.swift */,
+				BF6906CD1F2E267C00183B33 /* DigitFlippingView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +311,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DEAC5AD1F0FB5050064CD67 /* ViewController.swift in Sources */,
+				BF6906CC1F2DB21300183B33 /* GridView.swift in Sources */,
+				4D5C29631F0FCD3C0014B14E /* DependentSet.swift in Sources */,
+				4D828E3A1F28836A0002F5CC /* UIColor+Extensions.swift in Sources */,
+				4D5C29601F0FCD3C0014B14E /* Model.swift in Sources */,
+				4DEAC5AD1F0FB5050064CD67 /* ClockController.swift in Sources */,
+				4D0A5BB61F1778CC003613FA /* PolarPoint.swift in Sources */,
+				4D828E3C1F288D7C0002F5CC /* CGRect+Extensions.swift in Sources */,
+				4DEAC5C81F0FB55A0064CD67 /* ClockView.swift in Sources */,
+				BF6906CE1F2E267C00183B33 /* DigitFlippingView.swift in Sources */,
 				4DEAC5AB1F0FB5050064CD67 /* AppDelegate.swift in Sources */,
+				4DEAC5CA1F0FC47C0064CD67 /* ClockHandLayer.swift in Sources */,
+				4D851AA31F27618F00FDE487 /* ClockHand.swift in Sources */,
+				4D43F9A01F28D09000032119 /* WorldClockCollection.swift in Sources */,
+				4D3D29741F28DBD2005A3263 /* WorldClockCell.swift in Sources */,
+				4DEAC5CC1F0FCBF80064CD67 /* Clock.swift in Sources */,
+				4D5C295F1F0FCD3C0014B14E /* Dependent.swift in Sources */,
+				4D5C29621F0FCD3C0014B14E /* AbstractModel.swift in Sources */,
+				4D5807CD1F179B840078D71D /* CGPoint+Extensions.swift in Sources */,
+				4D851AA11F274CDC00FDE487 /* StylePalette.swift in Sources */,
+				4D5C29611F0FCD3C0014B14E /* ValueHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +546,7 @@
 				4DEAC5C31F0FB5050064CD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DEAC5C41F0FB5050064CD67 /* Build configuration list for PBXNativeTarget "ClockTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +555,7 @@
 				4DEAC5C61F0FB5050064CD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
