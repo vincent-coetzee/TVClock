@@ -55,17 +55,10 @@ internal class DigitFlippingView:UIView
     
     private var _currentDigit:Digit = .zero
     private var _nextDigit:Digit = .zero
-    private var _topHalf = CALayer()
-    private var _bottomHalf = CALayer()
-    private var _font = UIFont.boldSystemFont(ofSize:20)
-    private var _borderColor = UIColor.white
-    private var _textColor = UIColor.white
-    private var _fontSize:CGFloat = 20
-    private var _transformLayer = CATransformLayer()
-    private var _borderWidth:CGFloat = 5
-    private var _cornerRadius:CGFloat = 10
     private var _container = CALayer()
-    private var _nextLayers:(CALayer,CALayer,CALayer)?
+    private var _nextContainer = CALayer()
+    
+    public var style = Style(name:"default")
     
     public var digit:Digit
         {
@@ -80,49 +73,10 @@ internal class DigitFlippingView:UIView
             }
         }
     
-    public var font:UIFont
-        {
-        get
-            {
-            return(_font)
-            }
-        set
-            {
-            _font = newValue
-            updateBitmaps()
-            }
-        }
-    
-    public var fontSize:CGFloat
-        {
-        get
-            {
-            return(_fontSize)
-            }
-        set
-            {
-            _fontSize = newValue
-            updateBitmaps()
-            }
-        }
-    
-    public var borderWidth:CGFloat
-        {
-        get
-            {
-            return(_borderWidth)
-            }
-        set
-            {
-            _borderWidth = newValue
-            updateColors()
-            }
-        }
-    
     override init(frame:CGRect)
         {
         super.init(frame:frame)
-        backgroundColor = UIColor.black
+        initStyle()
         initLayers()
         setNeedsLayout()
         }
@@ -130,116 +84,77 @@ internal class DigitFlippingView:UIView
     required init?(coder aDecoder: NSCoder)
         {
         super.init(coder:aDecoder)
-        backgroundColor = UIColor.black
+        initStyle()
         initLayers()
         setNeedsLayout()
-        backgroundColor = UIColor.black
+        }
+    
+    private func initStyle()
+        {
+        style.foregroundColor = UIColor.orange
+        let height = self.bounds.size.height - 10
+        style.font = UIFont(name: style.font.fontName,size:height) ?? UIFont.boldSystemFont(ofSize: height)
+        self.backgroundColor = style.backgroundColor
+        self.layer.cornerRadius = style.cornerRadius
+        self.layer.borderWidth = style.borderWidth
+        self.layer.borderColor = style.borderColor.cgColor
         }
     
     private func initLayers()
         {
-        _container.isDoubleSided = false
-        _container.addSublayer(_topHalf)
-        _container.addSublayer(_bottomHalf)
+        _container = createTextLayer(for:_currentDigit,color:UIColor.orange)
         self.layer.addSublayer(_container)
-        self.layer.cornerRadius = _cornerRadius
-        guessFontSize()
-        updateColors()
-        updateBitmaps()
-        }
-    
-    private func updateBitmaps()
-        {
-        let attributes:[NSAttributedStringKey : Any] = [NSAttributedStringKey.font:_font,NSAttributedStringKey.foregroundColor:_textColor,NSAttributedStringKey.backgroundColor:self.backgroundColor!]
-        let image = _currentDigit.imageDigit(inRect:self.bounds,withAttributes:attributes)
-        _topHalf.contents = image.cgImage
-        _bottomHalf.contents = image.cgImage
-        }
-    
-    private func guessFontSize()
-        {
-        let height = self.bounds.size.height - 10
-        _font = UIFont(name: _font.fontName,size:height) ?? UIFont.boldSystemFont(ofSize: height)
-        }
-    
-    private func updateColors()
-        {
-        self.layer.borderWidth = _borderWidth
-        self.layer.borderColor = _borderColor.cgColor
         }
     
     override func layoutSubviews()
         {
         super.layoutSubviews()
         _container.frame = self.bounds
-        _topHalf.frame = _container.bounds
-        _bottomHalf.frame = _container.bounds
-        let topMask = CAShapeLayer()
-        topMask.frame = self.bounds
-        topMask.path = UIBezierPath(rect:self.bounds.topHalf(withGap:1)).cgPath
-        topMask.fillColor = UIColor.black.cgColor
-        _topHalf.mask = topMask
-        let bottomMask = CAShapeLayer()
-        bottomMask.path = UIBezierPath(rect:self.bounds.bottomHalf(withGap:1)).cgPath
-        bottomMask.fillColor = UIColor.black.cgColor
-        _bottomHalf.mask = bottomMask
         }
     
-    private func createIncomingLayers() -> (CALayer,CALayer,CALayer)
+    private func createTextLayer(for digit:Digit,color:UIColor) -> CALayer
         {
-        let attributes:[NSAttributedStringKey : Any] = [NSAttributedStringKey.font:_font,NSAttributedStringKey.foregroundColor:_textColor,NSAttributedStringKey.backgroundColor:self.backgroundColor!]
-        let image = _nextDigit.imageDigit(inRect:self.bounds,withAttributes:attributes)
-        let nextContainer = CALayer()
-        nextContainer.transform = CATransform3DMakeRotation(CGFloat.pi,1,0,0)
-        nextContainer.isDoubleSided = false
-        nextContainer.frame = self.bounds
-        let nextTop = CALayer()
-        nextContainer.addSublayer(nextTop)
-        nextTop.frame = nextContainer.bounds
-        let nextBottom = CALayer()
-        nextBottom.frame = nextContainer.bounds
-        nextContainer.addSublayer(nextBottom)
-        nextTop.contents = image.cgImage
-        nextBottom.contents = image.cgImage
-        let topMask = CAShapeLayer()
-        topMask.frame = self.bounds
-        topMask.path = UIBezierPath(rect:self.bounds.topHalf(withGap:1)).cgPath
-        topMask.fillColor = UIColor.black.cgColor
-        nextTop.mask = topMask
-        let bottomMask = CAShapeLayer()
-        bottomMask.path = UIBezierPath(rect:self.bounds.bottomHalf(withGap:1)).cgPath
-        bottomMask.fillColor = UIColor.black.cgColor
-        nextBottom.mask = bottomMask
-        return(nextContainer,nextTop,nextBottom)
+        let holder = CALayer()
+        holder.isDoubleSided = false
+        holder.frame = self.bounds
+        let textLayer = CATextLayer()
+        textLayer.isDoubleSided = false
+        textLayer.string = digit.textDigit
+        textLayer.apply(style:style)
+        textLayer.foregroundColor = color.cgColor
+        textLayer.frame = self.bounds.rectWithCenteredSize(style.size(of: digit.textDigit))
+        holder.addSublayer(textLayer)
+        return(holder)
         }
     
     private func startDigitAnimation()
         {
-        let duration:CFTimeInterval = 20
-        let (newContainer,newTop,newBottom) = createIncomingLayers()
+        let duration:CFTimeInterval = 5
+        let newContainer = createTextLayer(for:_nextDigit,color:UIColor.red)
         self.layer.addSublayer(newContainer)
-        let outTransform = newContainer.transform
-        let inTransform = _container.transform
+        _container.anchorPoint = CGPoint(x:0.5,y:0.5)
         let outAnimation = CABasicAnimation(keyPath: "transform")
         outAnimation.duration = duration
-        outAnimation.fromValue = inTransform
-        outAnimation.toValue = outTransform
+        outAnimation.fromValue = CATransform3DIdentity
+        outAnimation.toValue = CATransform3DMakeRotation(CGFloat.pi,1,0,0)
         outAnimation.isRemovedOnCompletion = true
         outAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         outAnimation.fillMode = kCAFillModeBoth
         _container.add(outAnimation,forKey:"transform")
+        _container.transform = CATransform3DMakeRotation(CGFloat.pi,1,0,0)
+        newContainer.anchorPoint = CGPoint(x:0.5,y:0.5)
         let inAnimation = CABasicAnimation(keyPath:"transform")
         inAnimation.duration = duration
-        inAnimation.fromValue = outTransform
-        inAnimation.toValue = inTransform
+        inAnimation.fromValue = CATransform3DMakeRotation(CGFloat.pi,1,0,0)
+        inAnimation.toValue = CATransform3DIdentity
         inAnimation.isRemovedOnCompletion = true
         inAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         inAnimation.fillMode = kCAFillModeBoth
         newContainer.add(inAnimation,forKey:"transform")
-        newContainer.transform = inTransform
+        newContainer.transform = CATransform3DIdentity
         inAnimation.delegate = self
         _currentDigit = _nextDigit
-        _nextLayers = (newContainer,newTop,newBottom)
+        _nextContainer = newContainer
         }
     }
 
@@ -248,7 +163,6 @@ extension DigitFlippingView:CAAnimationDelegate
     func animationDidStop(_ animation:CAAnimation,finished:Bool)
         {
         _container.removeFromSuperlayer()
-        (_container,_topHalf,_bottomHalf) = _nextLayers!
-        _nextLayers = nil
+        _container = _nextContainer
         }
     }

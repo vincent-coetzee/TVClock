@@ -28,6 +28,8 @@
 		4DEAC5C81F0FB55A0064CD67 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5C71F0FB55A0064CD67 /* ClockView.swift */; };
 		4DEAC5CA1F0FC47C0064CD67 /* ClockHandLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5C91F0FC47C0064CD67 /* ClockHandLayer.swift */; };
 		4DEAC5CC1F0FCBF80064CD67 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAC5CB1F0FCBF80064CD67 /* Clock.swift */; };
+		BF3BE33E1F2E8A80008FDA7A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BE33D1F2E8A80008FDA7A /* Style.swift */; };
+		BF3BE3411F2E8CE7008FDA7A /* CATextLayer + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BE3401F2E8CE7008FDA7A /* CATextLayer + Extensions.swift */; };
 		BF6906CC1F2DB21300183B33 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6906CB1F2DB21300183B33 /* GridView.swift */; };
 		BF6906CE1F2E267C00183B33 /* DigitFlippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6906CD1F2E267C00183B33 /* DigitFlippingView.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		4DEAC5C71F0FB55A0064CD67 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		4DEAC5C91F0FC47C0064CD67 /* ClockHandLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHandLayer.swift; sourceTree = "<group>"; };
 		4DEAC5CB1F0FCBF80064CD67 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		BF3BE33D1F2E8A80008FDA7A /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		BF3BE3401F2E8CE7008FDA7A /* CATextLayer + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATextLayer + Extensions.swift"; sourceTree = "<group>"; };
 		BF6906CB1F2DB21300183B33 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		BF6906CD1F2E267C00183B33 /* DigitFlippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitFlippingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,7 @@
 				4D5807CC1F179B840078D71D /* CGPoint+Extensions.swift */,
 				4D828E391F28836A0002F5CC /* UIColor+Extensions.swift */,
 				4D828E3B1F288D7C0002F5CC /* CGRect+Extensions.swift */,
+				BF3BE3401F2E8CE7008FDA7A /* CATextLayer + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 		4DEAC5A91F0FB5050064CD67 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				BF3BE33F1F2E8A90008FDA7A /* Styling */,
 				BF6906CA1F2DB1FB00183B33 /* Custom Views */,
 				4DEAC5B31F0FB5050064CD67 /* Info.plist */,
 				4D828E401F28BC720002F5CC /* Application */,
@@ -200,6 +206,14 @@
 				4D5C295C1F0FCD3C0014B14E /* ValueHolder.swift */,
 			);
 			path = "Value Models";
+			sourceTree = "<group>";
+		};
+		BF3BE33F1F2E8A90008FDA7A /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				BF3BE33D1F2E8A80008FDA7A /* Style.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 		BF6906CA1F2DB1FB00183B33 /* Custom Views */ = {
@@ -321,6 +335,7 @@
 				4DEAC5C81F0FB55A0064CD67 /* ClockView.swift in Sources */,
 				BF6906CE1F2E267C00183B33 /* DigitFlippingView.swift in Sources */,
 				4DEAC5AB1F0FB5050064CD67 /* AppDelegate.swift in Sources */,
+				BF3BE3411F2E8CE7008FDA7A /* CATextLayer + Extensions.swift in Sources */,
 				4DEAC5CA1F0FC47C0064CD67 /* ClockHandLayer.swift in Sources */,
 				4D851AA31F27618F00FDE487 /* ClockHand.swift in Sources */,
 				4D43F9A01F28D09000032119 /* WorldClockCollection.swift in Sources */,
@@ -330,6 +345,7 @@
 				4D5C29621F0FCD3C0014B14E /* AbstractModel.swift in Sources */,
 				4D5807CD1F179B840078D71D /* CGPoint+Extensions.swift in Sources */,
 				4D851AA11F274CDC00FDE487 /* StylePalette.swift in Sources */,
+				BF3BE33E1F2E8A80008FDA7A /* Style.swift in Sources */,
 				4D5C29611F0FCD3C0014B14E /* ValueHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
